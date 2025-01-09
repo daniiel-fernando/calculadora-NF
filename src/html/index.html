@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerador de Nota Fiscal</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Dados para a Nota Fiscal</h2>
+            <form id="nota-form">
+                <label for="valorVenda">Valor da Venda:</label>
+                <input type="number" id="valorVenda" required placeholder="R$ 0,00">
+
+                <label for="itensVendidos">Itens Vendidos:</label>
+                <input type="text" id="itensVendidos" required placeholder="Ex: 1x Produto A, 2x Produto B">
+
+                <label for="irpf">Imposto IRPF (%):</label>
+                <input type="number" id="irpf" required placeholder="0">
+
+                <label for="pis">Imposto PIS (%):</label>
+                <input type="number" id="pis" required placeholder="0">
+
+                <label for="cofins">Imposto COFINS (%):</label>
+                <input type="number" id="cofins" required placeholder="0">
+
+                <label for="inss">Imposto INSS (%):</label>
+                <input type="number" id="inss" required placeholder="0">
+
+                <label for="issqn">Imposto ISSQN (%):</label>
+                <input type="number" id="issqn" required placeholder="0">
+
+                <button type="button" onclick="gerarNota()">Gerar Nota Fiscal</button>
+            </form>
+        </section>
+
+        <section id="resultado">
+            <h2>Resultado</h2>
+            <div id="notaGerada"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Gerador de Nota Fiscal. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../javascript/main.js"></script>
+</body>
+</html>
